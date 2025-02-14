@@ -1,0 +1,57 @@
+1* 
+=========================================================================================================================================================================================================================
+Esta línea utiliza el método .map() en el array superheroesArray, el cual es un array de objetos.
+
+.map() es un método de los arrays en JavaScript que crea un nuevo array con los resultados de ejecutar una función sobre cada elemento del array original (en este caso, superheroesArray).
+
+La función que se pasa a .map() toma cada elemento de superheroesArray (que en este caso es un objeto que representa a un superhéroe) y crea una instancia de la clase Superheroe utilizando el constructor de esa clase.
+
+Dentro del map(), cada hero es un objeto que tiene varias propiedades (como id, nombreSuperheroe, nombreReal, etc.). Por ejemplo, hero.id es el valor de la propiedad id de cada objeto hero.
+
+Entonces, lo que hace el código es:
+
+Crear una nueva instancia de la clase Superheroe para cada objeto hero en el array superheroesArray, pasando las propiedades de hero como parámetros al constructor de la clase.
+Cada objeto hero se transforma en un objeto de la clase Superheroe, lo que te permite tener acceso a los métodos y propiedades que puedas haber definido en esa clase.
+El resultado de la operación es un nuevo array de instancias de la clase Superheroe, que es lo que se almacena en la constante superheroes.
+
+En resumen, esta línea convierte cada objeto simple en una instancia de la clase Superheroe con todas las propiedades definidas en el constructor de la clase.
+=========================================================================================================================================================================================================================
+
+2*
+=========================================================================================================================================================================================================================
+Esta línea ordena el array superheroes de acuerdo con los nombres de los superhéroes, es decir, lo ordena alfabéticamente por el campo nombreSuperheroe de cada instancia de la clase Superheroe.
+
+Desglose:
+.sort() es un método de los arrays en JavaScript que ordena los elementos de un array. Por defecto, .sort() ordena los elementos como cadenas de texto, pero en este caso se pasa una función de comparación personalizada para ordenar los superhéroes por su nombre.
+
+La función de comparación (a, b) => a.nombreSuperheroe.localeCompare(b.nombreSuperheroe):
+
+a y b son dos elementos del array superheroes que se comparan en cada paso del proceso de ordenación. a es un superhéroe, y b es otro superhéroe.
+a.nombreSuperheroe y b.nombreSuperheroe son los nombres de los superhéroes, que son propiedades de los objetos a y b respectivamente.
+localeCompare() es un método de las cadenas de texto en JavaScript que compara dos cadenas y devuelve:
+Un valor negativo si a.nombreSuperheroe es menor que b.nombreSuperheroe (esto indica que a debe ir antes que b).
+Un valor positivo si a.nombreSuperheroe es mayor que b.nombreSuperheroe (esto indica que a debe ir después de b).
+Cero si ambas cadenas son iguales.
+Esto permite que los elementos del array superheroes se ordenen alfabéticamente por el nombre de cada superhéroe, ya que .localeCompare() compara las cadenas de texto siguiendo las reglas del idioma local.
+
+Resultado:
+El método .sort() reordena el array superheroes en su lugar, es decir, modifica directamente el array original y lo organiza de manera ascendente por el campo nombreSuperheroe.
+
+Por ejemplo, si el array superheroes tuviera los nombres de superhéroes de esta manera:
+
+superheroes = [
+    { nombreSuperheroe: "Superman" },
+    { nombreSuperheroe: "Spiderman" },
+    { nombreSuperheroe: "Batman" }
+];
+
+Después de ejecutar el código .sort(), el array quedaría así:
+
+superheroes = [
+    { nombreSuperheroe: "Batman" },
+    { nombreSuperheroe: "Spiderman" },
+    { nombreSuperheroe: "Superman" }
+];
+
+Porque el nombre "Batman" viene antes alfabéticamente que "Spiderman" y "Superman".
+=========================================================================================================================================================================================================================
