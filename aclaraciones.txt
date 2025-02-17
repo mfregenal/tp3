@@ -55,3 +55,10 @@ superheroes = [
 
 Porque el nombre "Batman" viene antes alfabéticamente que "Spiderman" y "Superman".
 =========================================================================================================================================================================================================================
+
+3*
+=========================================================================================================================================================================================================================
+fs.writeFileSync(): Este método escribe el array actualizado en el archivo original (rutaOriginal).
+
+JSON.stringify(listaActualizada, null, 2): Convierte el array "listaActualizada" de nuevo en una cadena de texto en formato JSON, con un formato legible (el null, 2 es para aplicar un formato bonito, con sangrías).
+=========================================================================================================================================================================================================================
