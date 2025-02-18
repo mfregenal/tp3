@@ -1,0 +1,28 @@
+=======================================================================================================================================================================================
+REQ.QUERY
+=======================================================================================================================================================================================
+
+En el contexto de Express.js, req.query se utiliza para acceder a los parámetros de cadena de consulta desde la URL de una solicitud HTTP entrante. Estos parámetros son pares clave-valor que se encuentran después del signo de interrogación en la URL y están separados por el símbolo "&". Por ejemplo, en una URL como /search?name=GFG, req.query.name sería "GFG".
+
+Este objeto req.query es útil para recuperar información que los usuarios pueden ingresar en la barra de búsqueda o en formularios, y que se envían como parte de la URL. Es especialmente valioso para manejar información de búsqueda y otros tipos de consultas que los usuarios realizan en una aplicación web.
+
+req.query: Este objeto contiene la propiedad para cada parámetro de cadena de consulta en la ruta. Estas cadenas de consulta están en formato clave-valor y comienzan después del signo de interrogación en cualquier URL. Si hay más de uno, se separan con el símbolo "&".
+El uso de req.query es fundamental para procesar solicitudes que incluyen información adicional en la URL, como consultas de búsqueda o filtros en aplicaciones web
+
+=======================================================================================================================================================================================
+REQ.PARAMS
+=======================================================================================================================================================================================
+req.params en Express.js se utiliza para acceder a los parámetros de ruta definidos en la URL. Estos parámetros son valores dinámicos que forman parte de la ruta y se pueden utilizar para capturar información específica de la URL, como identificadores de recursos.
+
+Por ejemplo, si tienes una ruta como /users/:id, puedes usar req.params.id para obtener el valor del identificador de usuario que se especifica en la URL.
+
+Este objeto req.params es útil cuando necesitas capturar valores específicos de la URL que son parte de la ruta misma, en lugar de ser parte de la cadena de consulta (query string) o del cuerpo de la solicitud.
+
+Para usar req.params, debes definir rutas con segmentos dinámicos en tu aplicación Express, como se muestra en el siguiente ejemplo:
+
+app.get('/users/:id', (req, res) => {
+const userId = req.params.id;
+// Realizar operaciones con el userId
+});
+Este código captura el valor del parámetro id desde la URL y lo utiliza en la lógica de la aplicación.
+=======================================================================================================================================================================================
